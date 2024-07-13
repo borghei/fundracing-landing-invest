@@ -1,0 +1,49 @@
+@import 'src/core/styles/colors';
+@import 'src/core/styles/mixins';
+
+.fund-racing-landing {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 65%, 50% 80%, 50% 80%, 0 65%);
+
+  .investment-banner {
+    width: 100%;
+    user-select: none;
+  }
+
+  .investment-union {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+  }
+
+  .investment-content {
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    p {
+      color: $white;
+      text-align: center;
+      &:first-child {
+        font-size: 32px;
+        font-weight: 500;
+
+        @include fr-pre-lg {
+          font-size: 14px;
+        }
+      }
+      &:last-child {
+        font-size: 128px;
+        font-weight: 900;
+
+        @include fr-pre-lg {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}

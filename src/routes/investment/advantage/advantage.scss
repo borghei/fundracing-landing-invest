@@ -1,0 +1,91 @@
+@import "src/core/styles/colors";
+@import "src/core/styles/mixins";
+
+.fund-racing-advantage {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 64px;
+  margin-inline: auto;
+  gap: 64px;
+
+  p {
+    color: $white;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .advantages {
+    display: flex;
+    justify-content: space-between;
+
+    @include fr-pre-lg {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .advantage-background {
+      clip-path: polygon(15% 0, 85% 0, 100% 15%, 100% 100%, 0 100%, 0 15%);
+      background: $red-gradient;
+      width: 368px;
+      height: 291px;
+      position: relative;
+      box-sizing: border-box;
+
+      @include fr-pre-lg {
+        width: 311px;
+        height: 165px;
+      }
+
+      .advantage {
+        clip-path: polygon(15% 0, 85% 0, 100% 15%, 100% 100%, 0 100%, 0 15%);
+        background: $dark-gradient;
+        width: 366px;
+        height: 289px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        padding: 10%;
+
+        @include fr-pre-lg {
+          width: 309px;
+          height: 163px;
+          padding: 5%;
+        }
+
+        p {
+          &:first-child {
+            font-size: 20px;
+            font-weight: 700;
+            color: $white;
+            line-height: 1.5;
+            text-align: center;
+
+            @include fr-pre-lg {
+              font-size: 14px;
+            }
+          }
+
+          &:last-child {
+            font-size: 16px;
+            font-weight: 400;
+            color: $dark-gray;
+            margin-top: 32px;
+            line-height: 1.5;
+            text-align: center;
+
+            @include fr-pre-lg {
+              font-size: 12px;
+              margin-top: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@import "core/styles/reset.css";
+@import "core/styles/fonts.css";
+@import "core/styles/colors.scss";
+
+* {
+    font-family: 'Poppins', sans-serif !important;
+}
+
+#fund-racing {
+    background: $black;
+}

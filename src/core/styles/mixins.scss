@@ -1,0 +1,11 @@
+@mixin fr-pre-lg {
+  @media (max-width: 991.98px) {
+    @content;
+  }
+}
+
+@mixin fr-lg {
+  @media (min-width: 991.98px) {
+    @content;
+  }
+}

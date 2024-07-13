@@ -1,0 +1,33 @@
+@import "core/styles/colors.scss";
+@import "core/styles/mixins.scss";
+
+.fund-racing-input {
+  padding: 0 16px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFFFFF4D;
+
+  @include fr-pre-lg {
+    height: 40px;
+  }
+
+  input {
+    color: $white;
+    font-size: 16px;
+    font-weight: 400;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+
+    @include fr-pre-lg {
+      font-size: 12px;
+    }
+
+    &::placeholder {
+      color: $white;
+    }
+  }
+}

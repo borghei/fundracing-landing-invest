@@ -1,0 +1,80 @@
+@import 'src/core/styles/colors';
+@import 'src/core/styles/mixins';
+
+.fund-racing-ticket-size {
+  width: 100%;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: -128px;
+
+  @include fr-pre-lg {
+    margin-top: unset;
+    img {
+      width: 279px;
+      height: 123px;
+    }
+  }
+
+  p {
+    font-size: 32px;
+    font-weight: 700;
+    color: $white;
+
+    @include fr-pre-lg {
+      font-size: 16px;
+    }
+  }
+
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+    margin-top: 64px;
+    overflow: unset;
+
+    .swiper-wrapper {
+      align-items: center;
+      margin-top: 32px;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      opacity: 0.6;
+      transition: opacity 0.5s;
+      filter: blur(4px);
+
+      &-active {
+        opacity: 1;
+        filter: none;
+      }
+    }
+
+    .swiper-pagination {
+      position: absolute;
+      top: -32px;
+      width: 100%;
+      text-align: center;
+
+      .swiper-pagination-bullet {
+        cursor: pointer;
+        color: $dark-gray;
+        font-weight: 500;
+        font-size: 20px;
+        margin: 0 16px;
+
+        @include fr-pre-lg {
+          font-size: 14px;
+        }
+
+        &-active {
+          color: $white;
+        }
+      }
+    }
+  }
+}

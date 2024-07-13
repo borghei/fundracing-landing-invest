@@ -1,0 +1,36 @@
+@import "core/styles/colors.scss";
+@import "core/styles/mixins.scss";
+
+.fund-racing-button {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 24px;
+  box-sizing: border-box;
+  color: $white;
+  font-size: 16px;
+
+  @include fr-pre-lg {
+    height: 40px;
+    font-size: 12px;
+  }
+
+  &:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  &.primary {
+    background: $red-gradient;
+  }
+
+  &.success {
+    background: linear-gradient(90deg, #00C142 0%, #009132 100%);
+  }
+
+  &.transparent {
+    background: transparent;
+  }
+}

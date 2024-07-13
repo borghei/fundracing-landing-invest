@@ -1,0 +1,10 @@
+@import "core/styles/colors.scss";
+
+.fund-racing-page {
+  display: flex;
+  flex-direction: column;
+  max-width:100%;
+  margin: 0 auto;
+  background: $black;
+  overflow: hidden;
+}

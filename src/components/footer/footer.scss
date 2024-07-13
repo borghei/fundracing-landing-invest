@@ -1,0 +1,255 @@
+@import 'src/core/styles/colors.scss';
+@import 'src/core/styles/mixins.scss';
+
+.fund-racing-footer {
+  background: $footer-gradient;
+  position: relative;
+  height: 699px;
+  overflow: hidden;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 100%, 0 100%, 0 25%);
+  margin-top: 128px;
+
+  @include fr-pre-lg {
+    clip-path: polygon(50% 0%, 100% 15%, 100% 100%, 0 100%, 0 15%);
+    margin-top: 32px;
+  }
+
+  .up {
+    position: absolute;
+    cursor: pointer;
+    top: 48px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    span {
+      font-size: 12px;
+      font-weight: 400;
+      color: $white;
+    }
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 128px;
+    width: 75%;
+    margin-inline: auto;
+
+    p {
+      color: $white;
+
+      &:first-child {
+        background: linear-gradient(0deg, #A72F2F 0%, #FFFFFF 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        font-size: 96px;
+        font-weight: 900;
+        opacity: 0.4;
+
+        @include fr-pre-lg {
+          font-size: 40px;
+        }
+      }
+
+      &:last-child {
+        font-size: 16px;
+        font-weight: 400;
+
+        @include fr-pre-lg {
+          font-size: 10px;
+          margin-top: 16px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 64px;
+    width: 75%;
+    margin-inline: auto;
+
+    @include fr-pre-lg {
+      flex-direction: column;
+    }
+
+    .links {
+      display: flex;
+      gap: 32px;
+
+      @include fr-pre-lg {
+        gap: unset;
+        justify-content: space-between;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        @include fr-pre-lg {
+          gap: 8px;
+        }
+
+        span {
+          color: $white;
+          font-size: 20px;
+          font-weight: 700;
+          margin-bottom: 16px;
+          @include fr-pre-lg {
+            font-size: 14px;
+            margin-bottom: 8px;
+          }
+        }
+
+        a {
+          font-size: 16px;
+          color: $white;
+          opacity: 0.5;
+
+          @include fr-pre-lg {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .socials {
+      max-width: 515px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      @include fr-pre-lg {
+        margin-top: 32px;
+      }
+
+      p {
+        font-size: 20px;
+        font-weight: 700;
+        color: $white;
+
+        @include fr-pre-lg {
+          font-size: 14px;
+        }
+      }
+
+      .email-row {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 32px;
+
+        @include fr-pre-lg {
+          margin-top: 16px;
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .email-input {
+          background: #FFFFFF4D;
+          padding: 0 16px;
+          height: 64px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          @include fr-pre-lg {
+            height: 40px;
+            padding: 0 8px;
+          }
+
+          input {
+            font-size: 16px;
+            font-weight: 400;
+            height: 100%;
+            background: transparent;
+            border: none;
+            color: $white;
+
+            @include fr-pre-lg {
+              font-size: 12px;
+            }
+
+            &::placeholder {
+              color: $white;
+            }
+          }
+        }
+
+        .fund-racing-button {
+          height: 64px;
+
+          @include fr-pre-lg {
+            max-width: 84px;
+            height: 40px;
+            font-size: 12px;
+          }
+        }
+      }
+
+      .socials-row {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 32px;
+
+        p {
+          display: flex;
+          gap: 8px;
+          font-size: 20px;
+          font-weight: 700;
+          align-items: center;
+          color: $white;
+          @include fr-pre-lg {
+            font-size: 12px;
+          }
+        }
+
+        .social-media {
+          display: flex;
+          gap: 8px;
+
+          svg {
+            cursor: pointer;
+
+            @include fr-pre-lg {
+              width: 24px;
+              height: 24px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    font-size: 16px;
+    font-weight: 400;
+    color: $dark-gray;
+    position: absolute;
+    left: 50%;
+    bottom: 32px;
+    transform: translate(-50%, 0);
+    text-align: center;
+
+    @include fr-pre-lg {
+      font-size: 10px;
+      width: 100%;
+      svg {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+}
