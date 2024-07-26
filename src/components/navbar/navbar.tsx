@@ -72,6 +72,7 @@ export const Navbar: FC<Props> = () => {
                     onClose={toggleDrawer}
                     visible={isDrawerOpen}
                     drawerStyle={{ height: '80vh' }}
+                    width={"80%"}
                 >
                     <nav>
                     <NavLink to="#" className={({isActive}) => isActive ? 'active' : undefined}>HOME</NavLink>

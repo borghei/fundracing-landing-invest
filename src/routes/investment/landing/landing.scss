@@ -25,6 +25,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
+    @include fr-pre-lg {
+      top: 50%;
+    }
+
     p {
       color: $white;
       text-align: center;
@@ -39,6 +43,7 @@
       &:last-child {
         font-size: 128px;
         font-weight: 900;
+        margin-top: 16px;
 
         @include fr-pre-lg {
           font-size: 40px;

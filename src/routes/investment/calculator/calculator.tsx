@@ -71,26 +71,23 @@ export const Calculator: FC<Props> = ({ticketSize}) => {
                         <div className={"image-container"}><img src={hamilton}/></div>
                         <div className={"description"}>
                             <p>
-                                The default payout ratio for all FTMO Traders is set to 80%, however, an 80% share is
-                                not
-                                where
-                                we draw the line.<br/> All FTMO Traders can request <span>payout on-demand</span>. The
-                                payout can be processed
-                                just <span>after 14 days</span>, but you also have the ability to <span>cho</span> The
-                                default payout ratio for all FTMO
-                                Traders is set to 80%, however, an 80% share is not where we draw the line.<br/> The
-                                default
-                                payout
-                                ratio for all FTMO
+                                Invest in Performance, Not Just Potential:<br/> <br/>
+                                We all try to invest at the right place , but need to care out invest by using best
+                                strategies and best traders plans. Traders works with risk and the risk ratio will flow
+                                them to profit. so you can choose how much risk you want to take on your assets to know
+                                better how much profit you will gain monthly.
+                                Be noticed that more risk, could gain more profit! But more risk may also effect on your
+                                assets. Choose the right risk ratio and gain reasonable profit monthly.
                             </p>
                             <Slider
                                 min={1}
                                 max={100}
                                 marks={{
                                     1: '1%',
-                                    25: '25%',
-                                    50: '50%',
-                                    75: '75%',
+                                    20: '20%',
+                                    40: '40%',
+                                    60: '60%',
+                                    80: '80%',
                                     100: '100%',
                                 }}
                                 defaultValue={1}
@@ -229,7 +226,7 @@ export const Calculator: FC<Props> = ({ticketSize}) => {
                             <Button
                                 variant={"success"}
                                 text={"Done"}
-                                icon={<CheckOutlined />}
+                                icon={<CheckOutlined/>}
                                 onClick={() => setStep(Step.CALCULATOR)}
                             />
                         </div>

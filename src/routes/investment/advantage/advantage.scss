@@ -9,11 +9,20 @@
   margin-inline: auto;
   gap: 64px;
 
+  @include fr-pre-lg {
+    margin-top: 40px;
+    gap: 32px;
+  }
+
   p {
     color: $white;
     font-size: 24px;
     font-weight: 700;
     text-align: center;
+
+    @include fr-pre-lg {
+      font-size: 16px;
+    }
   }
 
   .advantages {
@@ -38,6 +47,7 @@
       @include fr-pre-lg {
         width: 311px;
         height: 165px;
+        clip-path: polygon(15% 0, 85% 0, 100% 25%, 100% 100%, 0 100%, 0 25%);
       }
 
       .advantage {
@@ -56,6 +66,7 @@
           width: 309px;
           height: 163px;
           padding: 5%;
+          clip-path: polygon(15% 0, 85% 0, 100% 25%, 100% 100%, 0 100%, 0 25%);
         }
 
         p {
@@ -76,7 +87,7 @@
             font-weight: 400;
             color: $dark-gray;
             margin-top: 32px;
-            line-height: 1.5;
+            line-height: 1.7;
             text-align: center;
 
             @include fr-pre-lg {

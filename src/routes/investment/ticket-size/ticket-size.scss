@@ -11,7 +11,7 @@
   margin-top: -128px;
 
   @include fr-pre-lg {
-    margin-top: unset;
+    margin-top: -8px;
     img {
       width: 279px;
       height: 123px;
@@ -35,6 +35,10 @@
     margin-top: 64px;
     overflow: unset;
 
+    @include fr-pre-lg {
+      margin-top: 40px;
+    }
+
     .swiper-wrapper {
       align-items: center;
       margin-top: 32px;
@@ -46,7 +50,6 @@
       align-items: center;
       opacity: 0.6;
       transition: opacity 0.5s;
-      filter: blur(4px);
 
       &-active {
         opacity: 1;
@@ -60,6 +63,10 @@
       width: 100%;
       text-align: center;
 
+      @include fr-pre-lg {
+        top: -16px;
+      }
+
       .swiper-pagination-bullet {
         cursor: pointer;
         color: $dark-gray;
@@ -69,11 +76,41 @@
 
         @include fr-pre-lg {
           font-size: 14px;
+          margin: 0 8px;
         }
 
         &-active {
           color: $white;
         }
+      }
+    }
+
+    .swiper-arrow-next, .swiper-arrow-prev {
+      position: absolute;
+      top: -24px;
+      transform: translate(-50%, -50%);
+      width: 32px;
+      height: 16px;
+
+
+      @include fr-pre-lg {
+        top: -8px;
+        width: 20px;
+        height: 8px;
+      }
+    }
+
+    .swiper-arrow-prev {
+      left: 33%;
+      @include fr-pre-lg {
+        left: 10%;
+      }
+    }
+
+    .swiper-arrow-next {
+      left: 66%;
+      @include fr-pre-lg {
+        left: 90%;
       }
     }
   }
